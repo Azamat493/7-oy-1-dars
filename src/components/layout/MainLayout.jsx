@@ -1,10 +1,17 @@
-// src/components/layout/MainLayout.jsx
 export default function MainLayout({ children }) {
   return (
     <div className="min-h-screen bg-gray-50">
-      <header className="bg-white shadow-sm">
+      <header className="bg-white sticky top-0 z-999 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 py-3 flex space-x-1 overflow-x-auto">
-          {["Dashboard", "Orders", "Address", "Notes", "Tasks", "Contacts", "Credit History"].map((tab) => (
+          {[
+            "Dashboard",
+            "Orders",
+            "Address",
+            "Notes",
+            "Tasks",
+            "Contacts",
+            "Credit History",
+          ].map((tab) => (
             <button
               key={tab}
               className={`whitespace-nowrap px-4 py-2 text-sm font-medium rounded-t-lg ${

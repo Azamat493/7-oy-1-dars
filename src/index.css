@@ -1,1 +1,76 @@
 @import "tailwindcss";
+
+@theme {
+  --button---dark: #8378ff;
+  --button---light: #513cce;
+  --website-pink: #e24b7f;
+  --website-purple: #8400db;
+  --website-orange: #ec7223;
+  --dark-bg-main-bg: #010d19;
+  --dark-bg-sub-bg: #001121;
+  --light-main-bg: #f6f8f9;
+  --light-sub-bg: #fff;
+  --border-dark: rgba(255, 255, 255, 0.13);
+  --border-light: rgba(14, 37, 60, 0.1);
+  --dark-text-text-primary: #fff;
+  --dark-text-text-secondary: rgba(255, 255, 255, 0.8);
+  --dark-text-text-disabled: rgba(255, 255, 255, 0.65);
+  --light-text-text-primary: #0e253c;
+  --light-text-text-secondary: rgba(14, 37, 60, 0.85);
+  --light-text-text-disabled: rgba(14, 37, 60, 0.65);
+  --light---gray-100: #0e253c;
+  --light---gray-90: rgba(14, 37, 60, 0.9);
+  --light---gray-80: rgba(14, 37, 60, 0.8);
+  --light---gray-70: rgba(14, 37, 60, 0.7);
+  --light---gray-60: rgba(14, 37, 60, 0.6);
+  --light---gray-50: rgba(14, 37, 60, 0.5);
+  --light---gray-40: rgba(14, 37, 60, 0.4);
+  --light---gray-30: rgba(14, 37, 60, 0.3);
+  --light---gray-20: rgba(14, 37, 60, 0.2);
+  --light---gray-10: rgba(14, 37, 60, 0.1);
+  --light---gray-05: rgba(14, 37, 60, 0.05);
+  --dark---gray-100: #fff;
+  --dark---gray-90: rgba(255, 255, 255, 0.9);
+  --dark---gray-80: rgba(255, 255, 255, 0.8);
+  --dark---gray-70: rgba(255, 255, 255, 0.7);
+  --dark---gray-60: rgba(255, 255, 255, 0.6);
+  --dark---gray-50: rgba(255, 255, 255, 0.5);
+  --dark---gray-40: rgba(255, 255, 255, 0.4);
+  --dark---gray-30: rgba(255, 255, 255, 0.3);
+  --dark---gray-20: rgba(255, 255, 255, 0.2);
+  --dark---gray-10: rgba(255, 255, 255, 0.1);
+  --dark---gray-05: rgba(255, 255, 255, 0.05);
+  --other-1: #e48d21;
+  --other-2: #d56574;
+  --other-3: #37a7da;
+  --other-4: #22c55e;
+  --other-5: #dc3545;
+  --other-6: #0d6efd;
+  --font-family: "Inter", sans-serif;
+  --font-second-family: "Lato", sans-serif;
+  --third-family: "Instrument Sans", sans-serif;
+  --font3: "Roboto", sans-serif;
+  --font4: "SF Pro Text", sans-serif;
+  --font5: "Archivo", sans-serif;
+  --font6: "PingFang SC", sans-serif;
+  --font7: "Helvetica Neue", sans-serif;
+}
+
+.scrollbar-custom::-webkit-scrollbar {
+  height: 8px; 
+  width: 0; 
+}
+
+.scrollbar-custom::-webkit-scrollbar-track {
+  background: #F9FAFB;
+  border-radius: 4px;
+}
+
+.scrollbar-custom::-webkit-scrollbar-thumb {
+  background: #D1D5DB;
+  border-radius: 4px;
+}
+
+.scrollbar-custom::-webkit-scrollbar-thumb:hover {
+  background: #9CA3AF;
+}

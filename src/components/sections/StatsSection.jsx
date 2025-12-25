@@ -1,4 +1,3 @@
-// src/components/sections/StatsSection.jsx
 import StatCard from "../ui/StatCard";
 import { statsData } from "../../data/dashboardData";
 

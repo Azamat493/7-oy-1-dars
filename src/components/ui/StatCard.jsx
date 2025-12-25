@@ -1,32 +1,68 @@
-// src/components/ui/StatCard.jsx
 export default function StatCard({ title, value, change, icon, color }) {
   const isPositive = change.startsWith("+");
+  const arrowIcon = isPositive ? (
+    <svg
+      width="16"
+      height="16"
+      viewBox="0 0 16 16"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M11.3333 4C11.1565 4 10.9869 4.07024 10.8619 4.19526C10.7369 4.32029 10.6667 4.48986 10.6667 4.66667C10.6667 4.84348 10.7369 5.01305 10.8619 5.13807C10.9869 5.2631 11.1565 5.33333 11.3333 5.33333H12.3907L9.33333 8.39067L6.80466 5.862C6.67964 5.73702 6.5101 5.66681 6.33333 5.66681C6.15655 5.66681 5.98701 5.73702 5.86199 5.862L1.52866 10.1953C1.46499 10.2568 1.4142 10.3304 1.37926 10.4117C1.34432 10.4931 1.32593 10.5805 1.32516 10.6691C1.32439 10.7576 1.34126 10.8454 1.37478 10.9273C1.4083 11.0092 1.4578 11.0837 1.5204 11.1463C1.58299 11.2089 1.65743 11.2584 1.73936 11.2919C1.82129 11.3254 1.90907 11.3423 1.99759 11.3415C2.08611 11.3407 2.17359 11.3223 2.25493 11.2874C2.33627 11.2525 2.40983 11.2017 2.47133 11.138L6.33333 7.276L8.86199 9.80467C8.98701 9.92965 9.15655 9.99986 9.33333 9.99986C9.5101 9.99986 9.67964 9.92965 9.80466 9.80467L13.3333 6.276V7.33333C13.3333 7.51014 13.4036 7.67971 13.5286 7.80474C13.6536 7.92976 13.8232 8 14 8C14.1768 8 14.3464 7.92976 14.4714 7.80474C14.5964 7.67971 14.6667 7.51014 14.6667 7.33333V4.66667C14.6667 4.48986 14.5964 4.32029 14.4714 4.19526C14.3464 4.07024 14.1768 4 14 4H11.3333Z"
+        fill="#22C55E"
+      />
+    </svg>
+  ) : (
+    <svg
+      width="16"
+      height="16"
+      viewBox="0 0 16 16"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g clipPath="url(#clip0_90_26071)">
+        <path
+          d="M11.586 10.3334H11.3334C11.0681 10.3334 10.8138 10.4387 10.6262 10.6263C10.4387 10.8138 10.3334 11.0682 10.3334 11.3334C10.3334 11.5986 10.4387 11.853 10.6262 12.0405C10.8138 12.228 11.0681 12.3334 11.3334 12.3334H14C14.2652 12.3334 14.5196 12.228 14.7071 12.0405C14.8947 11.853 15 11.5986 15 11.3334V8.66672C15 8.40151 14.8947 8.14715 14.7071 7.95961C14.5196 7.77208 14.2652 7.66672 14 7.66672C13.7348 7.66672 13.4805 7.77208 13.2929 7.95961C13.1054 8.14715 13 8.40151 13 8.66672V8.91939L10.04 5.95939C9.85252 5.77212 9.59836 5.66693 9.33336 5.66693C9.06835 5.66693 8.81419 5.77212 8.62669 5.95939L6.33336 8.25339L2.70669 4.62672C2.6144 4.53126 2.50402 4.45513 2.38199 4.40278C2.25996 4.35043 2.12873 4.3229 1.99595 4.32181C1.86317 4.32072 1.7315 4.34608 1.60863 4.39642C1.48576 4.44676 1.37414 4.52107 1.28029 4.615C1.18644 4.70894 1.11224 4.82063 1.06202 4.94355C1.0118 5.06647 0.986558 5.19816 0.987774 5.33094C0.98899 5.46371 1.01664 5.59492 1.0691 5.7169C1.12157 5.83888 1.1978 5.94919 1.29335 6.04139L5.62669 10.3747C5.81419 10.562 6.06835 10.6672 6.33336 10.6672C6.59836 10.6672 6.85252 10.562 7.04002 10.3747L9.33336 8.08006L11.586 10.3327V10.3334Z"
+          fill="#DC3545"
+        />
+      </g>
+      <defs>
+        <clipPath id="clip0_90_26071">
+          <rect width="16" height="16" fill="white" />
+        </clipPath>
+      </defs>
+    </svg>
+  );
 
   return (
-    <div className="bg-white rounded-xl shadow-sm p-4 border border-gray-100">
-          <div className="flex gap-5 items-start">
-               <div className={``}>
-          <img
-            src={icon}
-            alt={title}
-            className=" object-contain"
-          />
+    <>
+      <div className="bg-[var(--light-main-bg)]  border border-[color:var(--border-light)] shadow-[0_3px_6px_0_rgba(0,0,0,0.06)] rounded-2xl border-solid  p-4">
+        <div className="flex gap-5 items-start">
+          <div className={``}>
+            <img src={icon} alt={title} className=" object-contain" />
+          </div>
+          <div>
+            <p className="font-medium text-xs leading-[150%] text-[color:var(--light-text-text-secondary)] font-family">
+              {title}
+            </p>
+            <p className="font-semibold text-[22px] leading-[145%] text-[color:var(--light-text-text-primary)] font-family mt-1">
+              {value}
+            </p>
+          </div>
         </div>
-        <div>
-          <p className="text-gray-500 text-sm">{title}</p>
-          <p className="text-2xl font-bold mt-1">{value}</p>
+        <div className="mt-4 p-3 items-center flex justify-between -mx-4 -mb-4 rounded-b-2xl bg-[var(--light-sub-bg)] border-t border-[color:var(--border-light)]">
+          <p
+            className={`flex items-center gap-1 text-xs ${
+              isPositive ? "text-green-600" : "text-red-600"
+            }`}
+          >
+            {arrowIcon}
+            {change}
+          </p>
+          <p>From The Last Month</p>
         </div>
-
-       
       </div>
-
-      <p
-        className={`text-xs mt-2 ${
-          isPositive ? "text-green-600" : "text-red-600"
-        }`}
-      >
-        {change} from last month
-      </p>
-    </div>
+    </>
   );
 }

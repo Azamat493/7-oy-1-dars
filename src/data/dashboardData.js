@@ -1,5 +1,8 @@
-// src/data/dashboardData.js
 import Frame from "../assets/images/Frame.png";
+import Frame2 from "../assets/images/Frame2.png";
+import Frame3 from "../assets/images/Frame3.png";
+import Frame4 from "../assets/images/Frame4.png";
+import Frame5 from "../assets/images/Frame5.png";
 export const statsData = [
   {
     id: 1,
@@ -14,7 +17,7 @@ export const statsData = [
     title: "Total Taken",
     value: "123",
     change: "-15%",
-    icon: "💰",
+    icon: Frame2,
     color: "bg-green-100 text-green-600",
   },
   {
@@ -22,33 +25,34 @@ export const statsData = [
     title: "Total Revenue",
     value: "123",
     change: "+28%",
-    icon: "📈",
+    icon: Frame3,
     color: "bg-purple-100 text-purple-600",
   },
   {
     id: 4,
     title: "Pending Orders",
     value: "$1,234.99",
-    change: "+28%",
-    icon: "⏳",
+    change: "-28%",
+    icon: Frame4,
     color: "bg-yellow-100 text-yellow-600",
   },
   {
     id: 5,
     title: "Pending Returns",
     value: "$1,234.99",
-    change: "+28%",
-    icon: "🔄",
+    change: "-28%",
+    icon: Frame5,
     color: "bg-red-100 text-red-600",
   },
 ];
 
 export const orderStatusData = {
-  new: 50,
-  pending: 50,
-  dispatched: 50,
-  delivered: 123,
-  cancelled: 50,
+  All: 50,
+  New: 50,
+  Pending: 50,
+  Dispatched: 123,
+  Delivered: 50,
+  Cancelled: 50,
 };
 
 export const recentActivities = [
@@ -75,48 +79,9 @@ export const recentActivities = [
   },
 ];
 
-export const recentOrders = [
-  {
-    id: "275936",
-    product: "iPhone 15 Pro Max",
-    channel: "eBay",
-    customer: "Gabriella...",
-    total: "$400.00",
-  },
-  {
-    id: "415368",
-    product: "White Denim T-Shirt M...",
-    channel: "Walmart",
-    customer: "Harris Sa...",
-    total: "$151.00",
-  },
-];
 
-export const topSelling = [
-  {
-    name: "iPhone 15 Pro Max",
-    sells: 156,
-    category: "Mobile",
-    revenue: "$6,240.00",
-  },
-  {
-    name: "White Denim T-Shirt",
-    sells: 139,
-    category: "Clothing",
-    revenue: "$2,085.00",
-  },
-];
 
-export const persons = [
-  { name: "Luisa Winters", email: "Joneshighman@gmail.com", role: "Manager" },
-  { name: "Syed Dean", email: "Fisherman12@gmail.com", role: "Worker" },
-];
 
-export const revenueData = [
-  { month: "Jan", value: 589 },
-  { month: "Feb", value: 840 },
-  { month: "Mar", value: 898 },
-  { month: "Apr", value: 203 },
-  { month: "May", value: 400 },
-  { month: "Jun", value: 920 },
-];
+
+
+

@@ -1,14 +1,19 @@
-// src/components/sections/RecentActivitiesSection.jsx
 import { recentActivities } from "../../data/dashboardData";
 
 export default function RecentActivitiesSection() {
   return (
     <div className="bg-white rounded-xl p-4 border border-gray-100">
       <div className="flex justify-between items-center mb-4">
-        <h3 className="font-semibold">Recent Activities</h3>
+        <h3 className=" font-semibold text-lg leading-[133%] text-[color:var(--light-text-text-primary)] font-family">
+          Recent Activities
+        </h3>
         <div className="flex gap-2">
-          <button className="text-xs border rounded px-2 py-1">Message</button>
-          <button className="text-xs border rounded px-2 py-1">Email</button>
+          <button className="font-medium text-sm leading-[157%] text-[color:var(--light-text-text-primary)] font-family border border-[color:var(--border-light)] px-4 py-2 rounded-xl border-solid">
+            Message
+          </button>
+          <button className="font-medium text-sm leading-[157%] text-[color:var(--light-text-text-primary)] font-family border border-[color:var(--border-light)] px-4 py-2 rounded-xl border-solid">
+            Email
+          </button>
         </div>
       </div>
       <div className="space-y-3">
