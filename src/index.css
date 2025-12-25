@@ -55,7 +55,9 @@
   --font6: "PingFang SC", sans-serif;
   --font7: "Helvetica Neue", sans-serif;
 }
-
+body {
+    overflow-x: hidden;
+}
 .scrollbar-custom::-webkit-scrollbar {
   height: 8px; 
   width: 0; 
